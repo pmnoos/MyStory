@@ -1,0 +1,21 @@
+*.pyc
+__pycache__/
+*.log
+*.pot
+*.py[cod]
+*.sqlite3
+*.env
+*.mo
+
+# Django stuff:
+*.log
+db.sqlite3
+/staticfiles/
+/mediafiles/
+
+# If using Virtualenv:
+env/
+venv/
+
+# macOS
+.DS_Store

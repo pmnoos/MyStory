@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin" style="max-width:400px;margin:auto">
+    <h2 class="w3-center">Login</h2>
+    <form method="post" class="w3-container">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}">
+        {% if form.errors %}
+            <div class="w3-red w3-padding">
+                <p>There was an error logging in. Please try again.</p>
+            </div>
+        {% endif %}
+        <div class="w3-section">
+            {{ form.username.label_tag }} {{ form.username }}
+        </div>
+        <div class="w3-section">
+            {{ form.password.label_tag }} {{ form.password }}
+        </div>
+        <button type="submit" class="w3-button w3-block w3-blue w3-section w3-padding">Login</button>
+    </form>
+</div>
+{% endblock %}

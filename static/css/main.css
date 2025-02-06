@@ -1,0 +1,101 @@
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300, 400, 500, 600;
+    background-color: #6e6b6b;
+    margin: 0;
+    padding: 0;
+}
+.header-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%; /* Adjust the width as needed */
+}
+.header-container {
+  text-align: center;
+}
+
+.menu-container {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+.chapter-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .chapter-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .chapter-location {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .chapter-info {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  .chapter-image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    margin: 20px 0;
+  }
+  
+  .no-image-text {
+    color: #999;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  
+ 
+  /* Set a readable font */
+.chapter-content {
+  font-family: 'Merriweather', serif;  /* Or another font */
+  font-size: 24px;
+  line-height: 1.6;
+  color: #333;
+  padding: 20px;
+}
+
+/* Subtitle styling */
+.chapter-subtitle {
+  font-size: 28px;
+  font-weight: bold;
+  color: #004d99;
+  margin-bottom: 15px;
+}
+
+
+/* Adjust paragraph spacing */
+.chapter-body p {
+  margin-bottom: 15px;
+}
+
+/* Enhance images inside chapters */
+.chapter-body img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 10px 0;
+}

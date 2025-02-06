@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="w3-container w3-margin">
+    <div class="w3-bar">
+        <a href="{% url 'edit_chapter' slug=chapter.slug %}" class="w3-bar-item w3-button w3-blue w3-margin-right">Edit Chapter</a>
+        <a href="{% url 'chapter_list' %}" class="w3-bar-item w3-button w3-blue">Back to All Chapters</a>
+    </div>
+
+    <hr class="w3-border-top w3-green">
+
+    <div class="w3-display-container" style="position: relative; width: 100%; height: 400px; background-color: #ccc;">
+        {% if chapter.cover_image %}
+            <img src="{{ chapter.cover_image.url }}" alt="Cover Image" class="w3-image w3-round"
+                 style="width: 100%; height: 100%; object-fit: cover;">
+        {% endif %}
+        <div class="w3-display-middle">
+            <h1 style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+                {{ chapter.title }}
+            </h1>
+        </div>
+    </div>
+
+    <hr class="w3-border-top w3-green">
+
+    <div class="w3-container chapter-content">
+        {% if chapter.subtitle %}
+            <h2 class="chapter-subtitle">{{ chapter.subtitle|safe }}</h2>
+        {% endif %}
+        
+        <div class="chapter-body">
+            {{ chapter.content|safe }}
+        </div>
+    </div>
+     
+        <div class="w3-bar w3-margin-top">
+            {% if previous_chapter %}
+                <a href="{% url 'chapter_detail' slug=previous_chapter.slug %}" class="w3-bar-item w3-button w3-blue w3-margin-right">Previous Chapter</a>
+            {% endif %}
+            {% if next_chapter %}
+                <a href="{% url 'chapter_detail' slug=next_chapter.slug %}" class="w3-bar-item w3-button w3-blue">Next Chapter</a>
+            {% endif %}
+        </div>
+
+    </div>
+</div>
+{% endblock %}
